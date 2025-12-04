@@ -1,10 +1,10 @@
 package com.mikkytrionze.design.patterns;
 
-import com.mikkytrionze.design.patterns.structural.adapterdesignpattern.AdapterPattern;
+import com.mikkytrionze.design.patterns.structural.bridgedesignpattern.BridgePattern;
 
 public class Main {
     public static void main(String[] args) {
-        var adapterdesignpattern = new AdapterPattern();
-        adapterdesignpattern.execute();
+        var bridgedesignpattern = new BridgePattern();
+        bridgedesignpattern.execute();
     }
 }
