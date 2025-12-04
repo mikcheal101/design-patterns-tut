@@ -9,8 +9,17 @@ public class PepperoniPizza extends Pizza {
     }
 
     @Override
-    public void deliver() {
-        System.out.println("Delivering a " + crust + " pizza with " + sauce + " and " + topping + ".");
+    public void prepare() {
+        System.out.println("Preparing Pepperoni Pizza with " + sauce + ", " + topping + " on " + crust);
     }
 
+    @Override
+    public void bake() {
+        System.out.println("Baking Pepperoni Pizza at 450 degrees for 12 minutes.");
+    }
+
+    @Override
+    public void box() {
+        System.out.println("Boxing Pepperoni Pizza in standard packaging.");
+    }
 }

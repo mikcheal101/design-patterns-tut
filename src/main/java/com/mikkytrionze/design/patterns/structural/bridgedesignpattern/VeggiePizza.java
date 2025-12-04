@@ -9,8 +9,17 @@ public class VeggiePizza extends Pizza {
     }
 
     @Override
-    public void deliver() {
-        System.out.println("Delivering a " + crust + " pizza with " + sauce + " and " + topping + ".");
+    public void prepare() {
+        System.out.println("Preparing Veggie Pizza with " + sauce + ", " + topping + " on " + crust);
     }
 
+    @Override
+    public void bake() {
+        System.out.println("Baking Veggie Pizza at 425 degrees for 15 minutes.");
+    }
+
+    @Override
+    public void box() {
+        System.out.println("Boxing Veggie Pizza in eco-friendly packaging.");
+    }
 }

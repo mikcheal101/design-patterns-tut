@@ -9,16 +9,13 @@ public class BridgePattern {
         System.out.println("Bridge Design Pattern:");
 
         // Implementation of Bridge Pattern would go here
-        Pizza americanPepperoniPizza = new AmericanPepperoniPizza();
-        americanPepperoniPizza.deliver();
+        var pepperoniPizza = new PepperoniPizza();
+        var veggiePizza = new VeggiePizza();
 
-        Pizza americanVeggiePizza = new AmericanVeggiePizza();
-        americanVeggiePizza.deliver();
+        var italianRestaurant = new ItalianRestaurant(pepperoniPizza);
+        italianRestaurant.processOrder();
 
-        Pizza italianPepperoniPizza = new ItalianPepperoniPizza();
-        italianPepperoniPizza.deliver();
-
-        Pizza italianVeggiePizza = new ItalianVeggiePizza();
-        italianVeggiePizza.deliver();
+        var americanRestaurant = new AmericanRestaurant(veggiePizza);
+        americanRestaurant.processOrder();
     }
 }

@@ -6,5 +6,7 @@ public abstract class Pizza {
     protected String topping;
     protected String crust;
 
-    public abstract void deliver();
+    public abstract void prepare();
+    public abstract void bake();
+    public abstract void box();
 }
