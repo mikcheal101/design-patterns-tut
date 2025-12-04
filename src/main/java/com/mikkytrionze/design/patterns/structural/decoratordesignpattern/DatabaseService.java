@@ -5,4 +5,14 @@ public class DatabaseService {
         // Simulate database access
         return username + "@example.com";
     }
+
+    public String getPhoneNumberFromUsername(String username) {
+        // Simulate database access
+        return "+12" + username.hashCode();
+    }
+
+    public String getFBNameFromUsername(String username) {
+        // Simulate database access
+        return username.hashCode() + "@Facebook.com";
+    }
 }
