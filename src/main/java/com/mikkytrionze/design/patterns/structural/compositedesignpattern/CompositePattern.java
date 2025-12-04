@@ -1,8 +1,5 @@
 package com.mikkytrionze.design.patterns.structural.compositedesignpattern;
 
-import java.util.Arrays;
-import java.util.Collections;
-
 public class CompositePattern {
 
     public void execute() {
