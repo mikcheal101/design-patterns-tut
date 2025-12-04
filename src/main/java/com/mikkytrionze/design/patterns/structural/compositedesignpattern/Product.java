@@ -1,20 +1,28 @@
 package com.mikkytrionze.design.patterns.structural.compositedesignpattern;
 
-public class Product {
+public abstract class Product implements Box {
 
-    private String title;
-    private double price;
+    protected final String title;
+    protected final double price;
 
     public Product(String title, double price) {
         this.title = title;
         this.price = price;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
     public double getPrice() {
         return price;
     }
 
-    public String getTitle() {
-        return title;
+    @Override
+    public String toString() {
+        return "Product{" +
+                "title='" + title + '\'' +
+                ", price=" + price +
+                '}';
     }
 }

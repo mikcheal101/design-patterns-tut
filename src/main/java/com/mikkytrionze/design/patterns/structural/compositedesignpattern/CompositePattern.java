@@ -12,34 +12,24 @@ public class CompositePattern {
         System.out.println("Composite Design Pattern:");
 
         // Implementation of Composite Pattern would go here
-        Box box = new Box(
-            Arrays.asList(
-                new Box(
-                    Collections.emptyList(),
-                    Arrays.asList(
-                        new Product("Trouser Zipper", 15.0),
-                        new Product("Shirt Buttons", 25.0)
-                    )
-                ),
-                new Box(
-                    Collections.emptyList(),
-                    Arrays.asList(
-                        new Product("Water Jar", 30.0),
-                        new Product("Cooking Pot", 40.0)
-                    )
-                )
+        DeliveryService deliveryService = new DeliveryService();
+        deliveryService.setupOrder(
+            new CompositeBox(
+                new VideoGame("The Legend of Zelda, Breath of the Wild", 59.99),
+                new VideoGame("Super Mario Odyssey", 49.99)
             ),
-            Arrays.asList(
-                new Product("Jeans Sweater", 10.0),
-                new Product("Apron", 20.0)
+            new CompositeBox(
+                new CompositeBox(
+                    new Book("1984 by George Orwell", 19.99),
+                    new Book("To Kill a Mockingbird by Harper Lee", 14.99),
+                    new Book("The Great Gatsby by F. Scott Fitzgerald", 10.99)
+                ),
+                new VideoGame("Animal Crossing: New Horizons", 89.99),
+                new Book("The Catcher in the Rye by J.D. Salinger", 12.99)
             )
         );
-
-
-        box.getProducts();
-        box.getBoxes();
-        System.out.println("-----------------------");
-        System.out.println("Total Price: $" + box.calculatePrice());
+        double totalPrice = deliveryService.calculateOrderPrice();
+        System.out.printf("Total order price: $%.2f%n", totalPrice);
     }
 
 }
