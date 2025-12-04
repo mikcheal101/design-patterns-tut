@@ -27,5 +27,11 @@ public class PrototypePattern {
 
         System.out.println("Original Bus: " + danfo);
         System.out.println("Cloned Bus: " + moluwe);
+
+        Shape circlePrototype = new Circle(5);
+        ShapeClient shapeClient = new ShapeClient(circlePrototype);
+        Shape clonedCircle = shapeClient.createShape();
+        clonedCircle.draw();
+        
     }
 }
