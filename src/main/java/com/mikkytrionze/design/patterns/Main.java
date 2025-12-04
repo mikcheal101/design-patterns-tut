@@ -1,10 +1,10 @@
 package com.mikkytrionze.design.patterns;
 
-import com.mikkytrionze.design.patterns.structural.compositedesignpattern.CompositePattern;
+import com.mikkytrionze.design.patterns.structural.decoratordesignpattern.DecoratorPattern;
 
 public class Main {
     public static void main(String[] args) {
-        var compositedesignpattern = new CompositePattern();
-        compositedesignpattern.execute();
+        var decoratordesignpattern = new DecoratorPattern();
+        decoratordesignpattern.execute();
     }
 }
