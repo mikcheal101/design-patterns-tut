@@ -9,5 +9,8 @@ public class ProxyPattern {
         System.out.println("Proxy Design Pattern:");
 
         // Implementation of Proxy Pattern would go here
+        Internet internet = new RealInternet();
+        internet.connectTo("example.com");
+        internet.connectTo("blocked.com");
     }
 }
