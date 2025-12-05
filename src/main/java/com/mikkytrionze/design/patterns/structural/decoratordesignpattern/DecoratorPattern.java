@@ -9,13 +9,7 @@ public class DecoratorPattern {
         System.out.println("Decorator Design Pattern:");
 
         // Implementation of Decorator Pattern would go here
-        var notifier = new Notifier("john_doe");
-        notifier.send("Hello, this is a basic notification.");
-
-        var facebookNotifier = new FacebookNotifier("john_doe");
-        facebookNotifier.send("Hello, this is a Facebook notification.");
-
-        var whatsappNotifier = new WhatsAppNotifier("john_doe");
-        whatsappNotifier.send("Hello, this is a WhatsApp notification.");
+        INotifier notifier = new FacebookDecorator(new WhatsAppDecorator(new Notifier("Helloworld")));
+        notifier.send("This is a notification message!!!");
     }
 }

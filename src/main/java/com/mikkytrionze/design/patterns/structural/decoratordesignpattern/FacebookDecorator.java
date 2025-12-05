@@ -1,9 +1,9 @@
 package com.mikkytrionze.design.patterns.structural.decoratordesignpattern;
 
-public class FacebookNotifier extends Notifier {
+public class FacebookDecorator extends BaseNotifierDecorator {
 
-    public FacebookNotifier(String username) {
-        super(username);
+    public FacebookDecorator(INotifier notifier) {
+        super(notifier);
     }
 
     @Override
