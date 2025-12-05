@@ -1,5 +1,18 @@
 package com.mikkytrionze.design.patterns.structural.facadedesignpattern;
 
+/***
+ * Facade Pattern
+ * The Facade Pattern is a structural design pattern that provides a simplified interface to a complex subsystem.
+ * It acts as a front-facing interface that hides the complexities of the underlying code and provides a
+ * more user-friendly way to interact with it.
+ * In this example, we demonstrate the Facade Pattern by creating a facade class `BuyCryptoFacade` that simplifies
+ * the process of buying cryptocurrency. The facade handles user authentication, retrieves user information,
+ * and interacts with the appropriate cryptocurrency service to complete the purchase.
+ * This pattern is particularly useful when dealing with complex systems, as it reduces the learning curve
+ * for new users and promotes cleaner, more maintainable code.
+ * @author "Hemen Micheal Hirekaan"<hirekaan.micheal@gmail.com>
+ * 
+ */
 public class FacadePattern {
 
     public void execute() {
