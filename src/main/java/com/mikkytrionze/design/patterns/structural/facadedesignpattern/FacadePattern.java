@@ -18,6 +18,17 @@ public class FacadePattern {
 
         CryptoService ethereumService = CryptoFactory.getCryptoService("Ethereum");
         ethereumService.buyCurrency(user, 500.0);
+
+        System.out.println("-----------------------");
+        System.out.println("Facade Solution");
+
+        BuyCryptoFacade buyCryptoFacade = new BuyCryptoFacade();
+
+        // Using the facade to buy cryptocurrency with wrong credentials.
+        buyCryptoFacade.buyCrypto("username@sample.com", "passcode", "Bitcoin", 5000.0);
+
+        // Using the facade to buy cryptocurrency with correct credentials.
+        buyCryptoFacade.buyCrypto("user", "pass", "Bitcoin", 5000.0);
     }
 
 }
