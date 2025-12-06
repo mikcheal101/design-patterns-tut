@@ -1,10 +1,10 @@
 package com.mikkytrionze.design.patterns;
 
-import com.mikkytrionze.design.patterns.behavioural.chainofresponsibilitypattern.ChainOfResponsibilityPattern;
+import com.mikkytrionze.design.patterns.behavioural.strategydesignpattern.StrategyPattern;
 
 public class Main {
     public static void main(String[] args) {
-        var chainofresponsibility = new ChainOfResponsibilityPattern();
-        chainofresponsibility.execute();
+        var strategydesignpattern = new StrategyPattern();
+        strategydesignpattern.execute();
     }
 }
