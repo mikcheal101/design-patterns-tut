@@ -1,4 +1,7 @@
 package com.mikkytrionze.design.patterns.behavioural.chainofresponsibilitypattern;
+/***
+ * Chain of Responsibility pattern
+ */
 
 public class ChainOfResponsibilityPattern {
 
@@ -11,7 +14,7 @@ public class ChainOfResponsibilityPattern {
         // Implementation of Chain of Responsibility Pattern would go here.
         Database database = new Database();
         Handler validPasswordHandler = new ValidPasswordHandler(database);
-        
+
         Handler roleCheckerHandler = new RoleCheckHandler();
         validPasswordHandler.setNextHandler(roleCheckerHandler);
 
