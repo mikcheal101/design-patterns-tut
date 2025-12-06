@@ -3,24 +3,12 @@ package com.mikkytrionze.design.patterns.structural.flyweightdesignpattern;
 public class Book {
     private final String name;
     private final double price;
-    private final String type;
-    private final String distributor;
-    private final String otherData;
+    private final BookType bookType;
 
-    public Book() {
-        this.name = "";
-        this.price = 0.0;
-        this.type = "";
-        this.distributor = "";
-        this.otherData = "";
-    }
-    
-    public Book(String name, double price, String type, String distributor, String otherData) {
+    public Book(String name, double price, BookType bookType) {
         this.name = name;
         this.price = price;
-        this.type = type;
-        this.distributor = distributor;
-        this.otherData = otherData;
+        this.bookType = bookType;
     }
 
     public String getName() {
@@ -31,27 +19,16 @@ public class Book {
         return price;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public String getDistributor() {
-        return distributor;
-    }
-
-    public String getOtherData() {
-        return otherData;
+    public BookType getBookType() {
+        return bookType;
     }
 
     @Override
     public String toString() {
         return "Book{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                ", type='" + type + '\'' +
-                ", distributor='" + distributor + '\'' +
-                ", otherData='" + otherData + '\'' +
-                '}';
+            "name='" + name + '\'' +
+            ", price=" + price +
+            '}';
     }
 
 }
