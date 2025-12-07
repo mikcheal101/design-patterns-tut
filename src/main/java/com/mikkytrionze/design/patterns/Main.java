@@ -1,10 +1,10 @@
 package com.mikkytrionze.design.patterns;
 
-import com.mikkytrionze.design.patterns.behavioural.visitordesignpattern.VisitorPattern;
+import com.mikkytrionze.design.patterns.behavioural.mediatordesignpattern.MediatorPattern;
 
 public class Main {
     public static void main(String[] args) {
-        var visitordesignpattern = new VisitorPattern();
-        visitordesignpattern.execute();
+        var mediatordesignpattern = new MediatorPattern();
+        mediatordesignpattern.execute();
     }
 }
