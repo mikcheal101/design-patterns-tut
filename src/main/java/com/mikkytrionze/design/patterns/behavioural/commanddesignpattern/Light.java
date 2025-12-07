@@ -11,4 +11,8 @@ public class Light {
     public void setSwitchedOn(boolean switchedOn) {
         this.switchedOn = switchedOn;
     }
+
+    public void switchLights() {
+        this.switchedOn = !this.switchedOn;
+    }
 }

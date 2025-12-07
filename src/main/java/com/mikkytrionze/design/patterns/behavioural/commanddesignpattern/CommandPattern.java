@@ -10,11 +10,26 @@ public class CommandPattern {
 
         // Implementation goes here
         var house = new House();
-        house.addRoom(new LivingRoom());
-        house.addRoom(new Kitchen());
-        house.addRoom(new BedRoom());
-        house.addRoom(new BedRoom());
-        house.addRoom(new WashRoom());
-        house.getRooms().forEach(Room::switchLights);
+        var livingRoom = new LivingRoom();
+
+        var switchCommand = new SwitchLightCommand(new Light());
+        livingRoom.setCommand(switchCommand);
+        livingRoom.executeCommand();
+        house.addRoom(livingRoom);
+
+        var kitchen = new Kitchen();
+        kitchen.setCommand(switchCommand);
+        house.addRoom(kitchen);
+
+        var masterBedRoom = new BedRoom();
+        house.addRoom(masterBedRoom);
+
+        var guestBedRoom = new BedRoom();
+        house.addRoom(guestBedRoom);
+
+        var bathRoom = new WashRoom();
+        bathRoom.setCommand(switchCommand);
+        house.addRoom(bathRoom);
+        
     }
 }

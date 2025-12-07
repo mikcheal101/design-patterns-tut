@@ -2,13 +2,16 @@ package com.mikkytrionze.design.patterns.behavioural.commanddesignpattern;
 
 public abstract class Room {
 
-    private Light light;
+    private Command command;
 
     protected Room() {
-        this.light = new Light();
     }
 
-    public void switchLights() {
-        this.light.setSwitchedOn(!this.light.isSwitchedOn());
+    public void setCommand(Command command) {
+        this.command = command;
+    }
+
+    public void executeCommand() {
+        this.command.execute();
     }
 }
