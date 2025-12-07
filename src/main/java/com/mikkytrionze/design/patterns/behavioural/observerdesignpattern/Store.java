@@ -13,6 +13,12 @@ public class Store {
     }
 
     public void newItemPurchased() {
-        this.notificationService.notifySubscribers();
+        System.out.println("Notifying subscribers of a new item brought to the store.");
+        this.notificationService.notifySubscribers(Event.NEW_ITEM);
+    }
+
+    public void itemsSoldOut() {
+        System.out.println("Notifying subscribers of a sale.");
+        this.notificationService.notifySubscribers(Event.SALE);
     }
 }

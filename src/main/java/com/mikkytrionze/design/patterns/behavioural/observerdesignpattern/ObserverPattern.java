@@ -12,15 +12,18 @@ public class ObserverPattern {
         var store = new Store();
         var notificationService = store.getNotificationService();
         notificationService.subscribe(
+            Event.NEW_ITEM,
             new EmailMsgListener("mikkytrionze@samplemail.com")
         );
         notificationService.subscribe(
+            Event.SALE,
             new EmailMsgListener("customerservice@samplemail.com")
         );
         notificationService.subscribe(
+            Event.SALE,
             new MobileAppListener("jane.smith")
         );
-        store.newItemPurchased();
+        store.itemsSoldOut();
     }
 
 }
