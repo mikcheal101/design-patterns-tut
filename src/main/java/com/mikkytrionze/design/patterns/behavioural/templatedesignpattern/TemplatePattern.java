@@ -9,6 +9,10 @@ public class TemplatePattern {
         System.out.println("Template Design Pattern");
 
         /// Implementation goes here
-        
+        var wow = new WorldOfWarcraftLoader();
+        wow.load();
+
+        var diablo = new DiabloLoader();
+        diablo.load();
     }
 }
