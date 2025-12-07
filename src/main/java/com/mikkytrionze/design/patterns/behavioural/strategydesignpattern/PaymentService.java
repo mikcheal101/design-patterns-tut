@@ -1,12 +1,16 @@
 package com.mikkytrionze.design.patterns.behavioural.strategydesignpattern;
 
-import java.time.LocalDate;
 import java.util.Random;
 
 public class PaymentService {
 
     private int cost;
     private boolean includeDelivery;
+    private final PaymentStrategy paymentStrategy;
+
+    public PaymentService(PaymentStrategy paymentStrategy) {
+        this.paymentStrategy = paymentStrategy;
+    }
 
     public void setCost(int cost) {
         this.cost = cost;
@@ -17,12 +21,12 @@ public class PaymentService {
     }
 
     public void processOrder() {
-        // pop up to collect card details
-        CreditCard creditCard = new CreditCard("5537721094", LocalDate.now(), "664");
 
-        // validate credit card
-        System.out.println("Paying " + getTotal() + " using Credit card!");
-        creditCard.setAmount(creditCard.getAmount() + this.getTotal());
+        this.paymentStrategy.collectPaymentDetails();
+        if (this.paymentStrategy.validatePayment()) {
+            this.paymentStrategy.pay(this.getTotal());
+        }
+        
     }
 
     public int getTotal() {

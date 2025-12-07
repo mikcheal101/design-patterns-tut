@@ -9,5 +9,9 @@ public class StrategyPattern {
         System.out.println("Strategy Pattern");
 
         // Implementation goes here
+        PaymentStrategy paymentStrategy = new PaymentByCreditCard();
+        PaymentService paymentService = new PaymentService(paymentStrategy);
+        paymentService.setCost(6_000);
+        paymentService.processOrder();
     }
 }
