@@ -9,5 +9,11 @@ public class MediatorPattern {
         System.out.println("Mediator Design pattern");
 
         /// Implementation goes here
+        var controlTower = new AirportControlTower();
+        var airplaneCommercial = new CommercialAirplane(controlTower);
+        var airplanePrivateJet = new CommercialAirplane(controlTower);
+
+        airplaneCommercial.requestLanding();
+        airplanePrivateJet.requestTakeOff();
     }
 }
